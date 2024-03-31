@@ -33,10 +33,10 @@
           <a class="nav-link active" aria-current="page" href="index.php">Trang chủ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Giới Thiệu</a>
+          <a class="nav-link" href="gioiThieu.php">Giới Thiệu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Liên Hệ</a>
+          <a class="nav-link" href="lienHe.php">Liên Hệ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Dịch vụ</a>
@@ -59,7 +59,7 @@
 </nav>
     </div>
     <div class="col mt-2" >
-          <a class="nav-link" href="#">Tài Khoản</a>
+          <a class="nav-link" href="dangNhap.php">Tài Khoản</a>
     </div>
     <div class="col-3 mt-2">
     <form class="d-flex" role="search">

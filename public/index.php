@@ -73,7 +73,7 @@ include_once __DIR__ . '/../src/partials/header.php';
           </ul>
           <div class="card-body">
             <button  type="button" class="btn btn-primary"> 
-              <a href="shopping.html">Đặt cọc</a>
+              <a href="shopping.html" class="text-light">Đặt cọc</a>
               </button>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropvf7">
                 Xem chi tiết
@@ -93,7 +93,7 @@ include_once __DIR__ . '/../src/partials/header.php';
           </ul>
           <div class="card-body">
             <button  type="button" class="btn btn-primary"> 
-              <a href="shopping.html">Đặt cọc</a>
+              <a href="shopping.html" class="text-light">Đặt cọc</a>
               </button>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropvf7">
                 Xem chi tiết
@@ -115,7 +115,7 @@ include_once __DIR__ . '/../src/partials/header.php';
             </ul>
             <div class="card-body">
               <button  type="button" class="btn btn-primary"> 
-                <a href="shopping.html">Đặt cọc</a>
+                <a href="shopping.html" class="text-light">Đặt cọc</a>
                 </button>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropvf7">
                   Xem chi tiết
@@ -135,7 +135,7 @@ include_once __DIR__ . '/../src/partials/header.php';
             </ul>
             <div class="card-body">
               <button  type="button" class="btn btn-primary"> 
-                <a href="shopping.html">Đặt cọc</a>
+                <a href="shopping.html" class="text-light">Đặt cọc</a>
                 </button>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropvf7">
                   Xem chi tiết
