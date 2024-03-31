@@ -4,13 +4,13 @@ Học kỳ 2, Năm học 2023-2024
 
 **MSSV 1** : B2007421
 
-**Họ tên SV 1**:Ksor Khoa
+**Họ tên SV 1**: Ksor Khoa
 
-**MSSV 2**:B2014607
+**MSSV 2**: B2014607
 
-**Họ tên SV 2**:Nhan Vĩ Tài 
+**Họ tên SV 2**: Nhan Vĩ Tài 
 
-**Lớp học phần**:CT175-01
+**Lớp học phần**: CT175-01
 
-**Tên dự án**:Website bán xe ô tô
+**Tên dự án**: Website bán xe ô tô
 
