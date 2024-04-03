@@ -881,4 +881,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+<script>
+document.getElementById("dangky_Test").addEventListener("click", function() {
+  window.location.href = "dangkylaithu.php"; 
+});
+</script>
 <?php include_once __DIR__ . '/../src/partials/footer.php' ?>

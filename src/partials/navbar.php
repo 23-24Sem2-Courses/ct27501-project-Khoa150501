@@ -40,7 +40,7 @@
           <a class="nav-link" href="gioiThieu.php">Giới Thiệu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="lienHe.php">Liên Hệ</a>
+          <a class="nav-link" href="#">Liên Hệ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="dichvu.php">Dịch vụ</a>
@@ -71,6 +71,17 @@
   </div>
 </div>
 </div>
+<style>
+  #img-logo{
+    cursor: pointer;
+  }
+</style>
+ <script>
+document.getElementById("img-logo").addEventListener("click", function() {
+  window.location.href = "index.php"; 
+});
+</script>
+
 
 
     
