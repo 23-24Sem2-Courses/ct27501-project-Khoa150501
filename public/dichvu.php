@@ -15,7 +15,7 @@ include_once __DIR__ . '/../src/partials/header.php';
   <div class="container">
   <nav aria-label="breadcrumb" >
         <ol class="breadcrumb" >
-          <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
           <li class="breadcrumb-item active" aria-current="page">Dịch vụ</li>
         </ol>
       </nav>
