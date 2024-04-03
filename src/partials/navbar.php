@@ -12,6 +12,7 @@
           z-index: 1000;
           margin-bottom: 20px;
           background-color: aliceblue;
+          max-height: 200px;
         }
     </style>
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>

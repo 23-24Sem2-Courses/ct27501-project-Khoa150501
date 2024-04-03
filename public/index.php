@@ -8,6 +8,30 @@ include_once __DIR__ . '/../src/partials/header.php';
 <?php include_once __DIR__ . '/../src/partials/slider.php'?>
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<style>
+  .modal-cnt-bg{
+    background-color: #3C3C3C;
+    color: aliceblue;
+}
+.modal-body img {
+   max-width: 1000px;
+}
+.modal-body {
+  justify-content: center;
+  text-align: center;
+
+}
+.modal-in-cnt h5{
+    border-bottom: 1px solid wheat;
+    width: 200px;
+    margin-left: 40%;
+}
+.card-body>button a{
+    color: aliceblue;
+    text-decoration: none;
+}
+</style>
+
 <body>
     <div class="content mt-4">
       <div class="row">
@@ -60,7 +84,8 @@ include_once __DIR__ . '/../src/partials/header.php';
           </div>
         </div>
         <div class="col">
-          <div class="card mt-2" style="width: 28rem;">
+        
+          <div class="card mt-2 " style="width: 28rem;">
           <img src="img/img-vf7/vf7-hero-car.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">VF-7</h5>
@@ -189,27 +214,64 @@ include_once __DIR__ . '/../src/partials/header.php';
                   </div>
             </div>
         </div> -->
+
+
+
   <!-- Modal 1-->
   <div class="modal" id="staticBackdropvf7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content modal-cnt-bg">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">VF-7</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="color: white;"></i></button>
         </div>
         <div class="modal-body">
-        <h3>  VF 7 là một bước tiến đột phá trong thiết kế
-          xe ô tô của VinFast.</h3>
+        <h3>  VF 7 là một bước tiến đột phá trong thiết kế xe ô tô của VinFast.</h3><br>
           <img src="img/img-vf7/vf7-hero-car.png" alt="">
           <div class="modal-in-cnt">
-          <h5>Thông số chi tiết</h5>
-          <p>Nội thất rộng rãi (Chiều dài cơ sở 2.840 mm, Dài x Rộng x Cao tương đương 4.545 x 1.890 x 1.635,75 mm)
-          </p>
-          <p>Quãng đường chạy một lần sạc đầy 431 km *</p>
-          <p>Sở hữu 8 túi khí</p>
-          <p>Tăng tốc 0 - 100 km/h trong 5,8 s *</p>
+          <h5>Thông số chi tiết</h5><br>
+            <p>Nội thất rộng rãi (Chiều dài cơ sở 2.840 mm, Dài x Rộng x Cao tương đương 4.545 x 1.890 x 1.635,75 mm)</p>
+            <p>Quãng đường chạy một lần sạc đầy 431 km *</p>
+            <p>Sở hữu 8 túi khí</p>
+            <p>Tăng tốc 0 - 100 km/h trong 5,8 s *</p>
+          <h2>Triết lý thiết kế “Vũ trụ phi đối xứng</h2><br>
+            <p>Lấy cảm hứng từ vũ trụ và các vật thể bay trong không gian, VF 7 hiện thân cho sự tự do, công nghệ, thời đại, cá tính, mạnh mẽ và thể thao, thoả mãn mọi tâm hồn đam mê thẩm mỹ và tốc độ.</p>
+              <img src="img/img-vf7/vf7-img-removebg-preview.png" alt="">
+
+          <h2>Thiết kế nội thất hướng tới người lái.</h2><br>
+          <img src="img/img-vf7/vf7-noi-that-overview.png" alt=""> <br>
+
+          <h2>Tiện nghi thông minh tích hợp trên màn hình giải trí</h2> <br>
+          <p>Với kích cỡ 12,9 inch, có thể tùy chỉnh cá nhân hóa theo người dùng. Màn hình giải trí cảm ứng của VF 7 có thể giúp điều khiển các chức năng trên xe bằng cách vuốt/chạm nhẹ hoặc ra lệnh cho trợ lý ảo qua giọng nói.</p>
+          <img src="img/img-vf7/vf7-tien-nghi-3.png" alt="">
+
+
+          <h2>Hệ thống trợ lái nâng cao</h2> <br>
+          <p>Hỗ trợ lái trên đường cao tốc, Ứng dụng công nghệ và trang thiết bị hiện đại nhất, hệ thống trợ lái nâng cao VinFast đem lại trải nghiệm lái thư thái, dễ dàng để bạn an tâm tận hưởng cuộc sống.</p><br>
+
+          <iframe width="1000" height="500" src="https://static-bucket-sfcc.vinfastauto.com/6-traffic-jam-and-highway-assist.mp4" frameborder="0" allowfullscreen></iframe> <br>
+
+          <div class="container text-center mt-5">
+            <div class="row align-items-start">
+              <div class="col">
+              <h3 style="text-align: start;">3,5 km - Khoảng cách nhỏ cho mục tiêu lớn</h3>
+
+              <p style="text-align: start;">Định hình tiên phong thúc đẩy ngành công nghiệp xe điện, hướng tới một tương lai Xanh và Thông Minh, VinFast đã đầu tư hàng trăm triệu USD phát triển hạ tầng, từng bước "phủ rộng" trạm sạc xe điện:</p>
+              <ul style="text-align: start;">
+              <li>Hệ thống trạm sạc xe điện VinFast trải dài 63 tỉnh và thành phố.</li>
+              <li>106 tuyến quốc lộ quan trọng đều có trạm sạc.</li>
+              <li>80/85 thành phố đã được lắp đặt hệ thống trạm sạc.</li>
+              <li>Khoảng cách ngắn 3,5 km giữa 2 trạm sạc trong thành phố</li>
+              </ul>
+
+              </div>
+              <div class="col" >
+                <img src="img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc">
+              </div>
+            </div>
         </div>
-        </div>
+      </div>
+    </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
           <button type="button" class="btn btn-primary">Đặt Mua</button>
