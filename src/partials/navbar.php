@@ -14,6 +14,9 @@
           background-color: aliceblue;
           max-height: 200px;
         }
+        .nav-link {
+          color: black;
+        }
     </style>
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
 <div class="container-navbar">
@@ -23,7 +26,7 @@
       <img src="img\logo.png" alt="" id="img-logo">
     </div>
     <div class="col-6">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -40,7 +43,7 @@
           <a class="nav-link" href="lienHe.php">Liên Hệ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dịch vụ</a>
+          <a class="nav-link" href="dichvu.php">Dịch vụ</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,13 +63,10 @@
 </nav>
     </div>
     <div class="col mt-2" >
-          <a class="nav-link" href="dangNhap.php">Tài Khoản</a>
+    <a class="nav-link" href="dangNhap.php"><i class="fa fa-user"></i> Tài Khoản</a>
     </div>
     <div class="col-3 mt-2">
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    <button type="button" class="btn btn-primary" id="dangky_Test">Đăng ký lái thử</button>
     </div>
   </div>
 </div>
