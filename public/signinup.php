@@ -208,7 +208,7 @@ body {
 <nav aria-label="breadcrumb" >
         <ol class="breadcrumb" >
           <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Đăng nhập/Đăng ký</li>
+          <li class="breadcrumb-item active" aria-current="page">Đăng nhập / Đăng ký</li>
         </ol>
       </nav>
 </header>
@@ -217,12 +217,12 @@ body {
         <div class="form-container sign-up">
             <form action="#">
                 <h1>Đăng ký</h1>
-                <div class="social-icons">
+                <!--<div class="social-icons">
                     <a href="#" class="icon"><i class='bx bxl-facebook'></i></a>
                     <a href="#" class="icon"><i class='bx bxl-google'></i></a>
                     <a href="#" class="icon"><i class='bx bxl-linkedin'></i></a>
                     <a href="#" class="icon"><i class='bx bxl-github'></i></a>
-                </div>
+                </div>-->
                 <!-- <samp>or use your email for registration</samp> -->
                 <input type="text" name="fullname" placeholder="Họ tên">
                 <input type="email" name="email" placeholder="Email">
@@ -236,12 +236,12 @@ body {
         <div class="form-container sign-in">
             <form action="#">
                 <h1>Đăng nhập</h1>
-                <div class="social-icons">
+                <!--<div class="social-icons">
                     <a href="#" class="icon"><i class='bx bxl-facebook'></i></a>
                     <a href="#" class="icon"><i class='bx bxl-google'></i></a>
                     <a href="#" class="icon"><i class='bx bxl-linkedin'></i></a>
                     <a href="#" class="icon"><i class='bx bxl-github'></i></a>
-                </div>
+                </div>-->
                 <!-- <samp>or use your email Password</samp> -->
                 
                 <input type="email" placeholder="Email">
