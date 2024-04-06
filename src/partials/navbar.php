@@ -45,7 +45,19 @@
         <li class="nav-item">
           <a class="nav-link" href="dichvu.php">Dịch vụ</a>
         </li>
-        <li class="nav-item dropdown">
+        <div class="menu">
+          <ul>
+        <li><a href="product.php" class="nav-item">Model Cars</a>
+      <ul id="dropdown-cars">
+        <li><a href="#">VF-6<img src="img/vf6/vf-6.png" alt=""></a></li>
+        <li><a href="#">VF-7<img src="img\img-vf7\vf-7.png" alt=""></a></li>
+        <li><a href="#">VF-8<img src="img/vf8/vf-8.png" alt=""></a></li>
+        <li><a href="#">VF-9<img src="img/vf9/vf-9.png" alt=""></a></li>
+      </ul>
+    </li>
+    </ul>
+    </div>
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Model Cars
           </a>
@@ -56,14 +68,14 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Xem thêm mẫu khác</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
 </nav>
     </div>
     <div class="col mt-2" >
-    <a class="nav-link" href="dangNhap.php"><i class="fa fa-user"></i> Tài Khoản</a>
+    <a class="nav-link" href="signinup.php"><i class="fa fa-user"></i> Tài Khoản</a>
     </div>
     <div class="col-3 mt-2">
     <button type="button" class="btn btn-primary" id="dangky_Test">Đăng ký lái thử</button>
@@ -75,6 +87,55 @@
   #img-logo{
     cursor: pointer;
   }
+  .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  position: relative;
+  display: inline-block;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+.menu ul li a img{
+  width: 200px;
+}
+/* #dropdown-cars{
+  display: flex;
+  text-align: center;
+} */
+.menu ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+.menu ul li ul li {
+  display: block;
+}
+
+.menu ul li ul li a {
+  padding: 10px 20px;
+}
+
+.menu ul li ul li:hover {
+  background-color: aliceblue;
+}
+
 </style>
  <script>
 document.getElementById("img-logo").addEventListener("click", function() {

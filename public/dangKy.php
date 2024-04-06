@@ -22,7 +22,7 @@ include_once __DIR__ . '/../src/partials/header.php';
 							<h1 class="fs-4 card-title fw-bold mb-4">Đăng ký</h1>
 							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
-									<label class="mb-2 text-muted" for="name">Họ và tên</label>
+									<label class="mb-2 text-muted" for="fullname">Họ và tên</label>
 									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
 									<div class="invalid-feedback">
 										Bạn chưa nhập họ và tên	

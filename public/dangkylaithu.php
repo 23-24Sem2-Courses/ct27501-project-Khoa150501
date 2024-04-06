@@ -32,20 +32,21 @@ include_once __DIR__ . '/../src/partials/header.php';
 	-model_cars: varchar(45)
 	-test_date: date
 	-address: varchar(255) -->
+    <form action="">
         <div class="mb-3">
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nhập họ tên">
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="fullname" placeholder="Nhập họ tên">
         </div>
         <div class="mb-3">
-        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Nhập số điện thoại">
+        <input type="number" class="form-control" id="exampleFormControlInput1" name="phone" placeholder="Nhập số điện thoại">
         </div>
         <div class="mb-3">
-        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="ngày hẹn mượn">
+        <input type="date" class="form-control" id="exampleFormControlInput1" name="date" placeholder="ngày hẹn mượn">
         </div>
         <div class="mb-3">
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Địa chỉ">
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="address" placeholder="Địa chỉ">
         </div>
         <div class="mb-3">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ghi chú..."></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="notes" placeholder="Ghi chú..."></textarea>
         </div>
         <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -71,6 +72,7 @@ include_once __DIR__ . '/../src/partials/header.php';
            VF-9
         </label>
         </div>
+        </form>
     </div>
   </div>
 </div>

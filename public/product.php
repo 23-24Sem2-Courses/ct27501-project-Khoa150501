@@ -5,7 +5,6 @@ include_once __DIR__ . '/../src/partials/header.php';
 
 <?php include_once __DIR__ . '/../src/partials/navbar.php'?>
 
-<?php include_once __DIR__ . '/../src/partials/slider.php'?>
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
 <link rel="stylesheet" href="lib\css\all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -73,54 +72,71 @@ include_once __DIR__ . '/../src/partials/header.php';
   padding: 10px;
   
 }
-.bo-loc img:hover{
-  transform: scale(1.2);
+.product-slider img{
+    max-width: 1400px;
+
 }
-.bo-loc img{
-    width: 100px;
-    /* height: 100px; */
-    transition-duration: 0.3s;
+.product-slide-cnt-in{
+    margin-bottom: 500px;
 }
-.bordet-test{
-  width: 200px;
-  height: 100px;
-  border: 1px solid red;
-  border-radius: 5px;
-  transition-duration: 0.3s;
-  margin-left: 100px;
-  background-color: #668B8B;
+.product-slide-cnt-in h1{
+    font-style: italic;
+    font-style: bold;
 }
-.bordet-test:hover{
-  transform: scale(1.1);
+.product-slide-cnt-in button>a{
+    text-decoration: none;
 }
 </style>
 
 <body>
+<div id="carouselExampleCaptions" class="carousel slide">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    
+      <div class="carousel-caption d-none d-md-block">
+        <div class="product-slide-cnt-in">
+        <h1>VF-E43</h1>
+        <h5>Cùng bạn bứt phá mọi thử thách</h5>
+        <button  type="button" class="btn btn-primary"> 
+        <a href="#" class="text-light">Đặt cọc <br>50.000.000 VND</a>
+        </button>
+        </div>
+      </div>
+      
+      <img src="img/slider/library_7.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button> -->
 </div>
     <div class="content mt-4">
       <div class="row">
-
-
-        <div class="col mt-5">
-          <h5>Bảo hành & Dịch vụ</h5>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
-          </div>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
-          </div>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
-          </div>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
-          </div>
+        <div class="col bo-loc">
+        <h1>Bộ lọc theo giá tiền</h1>
+  <div class="filter">
+    <label for="priceFilter">Lọc theo giá tiền:</label>
+    <select id="priceFilter">
+      <option value="all">Tất cả</option>
+      <option value="100000000">Dưới 100 triệu</option>
+      <option value="200000000">Dưới 200 triệu</option>
+      <option value="300000000">Dưới 300 triệu</option>
+      <option value="500000000">Dưới 500 triệu</option>
+    </select>
+  </div>
+  <div class="show" ></div>
         </div>
 
         <!-- card col-1-->
-        <div class="col">
+        <div class="col" id="container-product-vf">
         
-          <div class="card mt-2 " style="width: 28rem;">
+          <div class="card mt-2 " style="width: 28rem;" class="product" price-data="100000000">
           <img src="img/img-vf7/vf-7.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">VF-7</h5>
@@ -141,7 +157,7 @@ include_once __DIR__ . '/../src/partials/header.php';
             </button>
           </div>
         </div>
-        <div class="card mt-2" style="width: 28rem;">
+        <div class="card mt-2" style="width: 28rem;" class="product" price-data="200000000">
           <img src="img/vf6/vf-6.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">VF-6</h5>
@@ -165,7 +181,7 @@ include_once __DIR__ . '/../src/partials/header.php';
       </div>
       <!-- card col-2-->
         <div class="col">
-          <div class="card mt-2" style="width: 28rem;">
+          <div class="card mt-2" style="width: 28rem;" class="product" price-data="300000000">
             <img src="img/vf8/vf-8.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">VF-8</h5>
@@ -186,7 +202,7 @@ include_once __DIR__ . '/../src/partials/header.php';
               </button>
             </div>
           </div>  
-          <div class="card mt-2 mb-2" style="width: 28rem;">
+          <div class="card mt-2 mb-2" style="width: 28rem;"class="product" price-data="400000000">
             <img src="img/vf9/vf-9.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">VF-9</h5>
@@ -862,26 +878,8 @@ include_once __DIR__ . '/../src/partials/header.php';
   </div>
       <!-- /Modal -->
     </div>
-    <div class="container">
-  <div class="row mt-5">
-    <div class="col">
-     <img src="img/library_2_bk.jpg" alt="" style="width:100px;">
-    </div>
-    <div class="col">
-      <h5>Thiết bị sạc di động</h5>
-      <div class="d-flex">
-            <p>VinFast cung cấp đa dạng giải pháp sạc để đáp ứng nhu cầu sử dụng của Khách hàng một cách thuận tiện nhất. <br> Khuyến cáo khách hàng sử dụng sạc chính hãng để hạn chế nguy cơ cháy nổ.</p>
-    
-    <img src="img/sac-vinfast-9565.jpg" alt="" style="width:300px;">
-    </div>
-    </div>
-    </div>
-    </div>
-    <div>
-
-        <img src="img/VinFast - Future of mobility - Vf8&9 (1) (1)_1666170465.jpg" alt="" style="width:1454px;">
-    </div>
-</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -933,8 +931,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-      
-</body>
 <script>
 document.getElementById("dangky_Test").addEventListener("click", function() {
   window.location.href = "dangkylaithu.php"; 
