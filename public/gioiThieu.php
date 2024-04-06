@@ -18,12 +18,12 @@ include_once __DIR__ . '/../src/partials/header.php';
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
           <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
         </ol>
       </nav>
       <h1> Giới thiệu </h1>
-      <hr class="border border-success border-2 opacity-50">
+      <hr class="border border-dark border-2 opacity-50">
       <p> <strong>VinFast</strong> là công ty thành viên thuộc tập đoàn <strong>Vingroup</strong>, một trong những Tập đoàn Kinh tế tư nhân đa ngành lớn nhất Châu Á. 
           <br><br>Với triết lý <strong>“Đặt khách hàng làm trọng tâm”</strong>, VinFast không ngừng sáng tạo để tạo ra các sản phẩm đẳng cấp và trải nghiệm xuất sắc cho mọi người.
           <br><br><strong>VinFast</strong> đã nhanh chóng thiết lập sự hiện diện toàn cầu, thu hút những tài năng tốt nhất từ khắp nơi trên thế giới và hợp tác với một số thương hiệu mang tính biểu tượng nhất trong ngành Ô tô.

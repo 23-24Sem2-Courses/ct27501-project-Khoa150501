@@ -25,7 +25,7 @@
     <div class="col-1 mt-2">
       <img src="img\logo.png" alt="" id="img-logo">
     </div>
-    <div class="col-6">
+    <div class="col-7">
     <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,10 +40,13 @@
           <a class="nav-link" href="gioiThieu.php">Giới Thiệu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Liên Hệ</a>
+          <a class="nav-link" href="lienHe.php">Liên Hệ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="dichvu.php">Dịch vụ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tramSac.php">Trạm sạc</a>
         </li>
         <div class="menu">
           <ul>
@@ -77,7 +80,7 @@
     <div class="col mt-2" >
     <a class="nav-link" href="signinup.php"><i class="fa fa-user"></i> Tài Khoản</a>
     </div>
-    <div class="col-3 mt-2">
+    <div class="col-2 mt-2">
     <button type="button" class="btn btn-primary" id="dangky_Test">Đăng ký lái thử</button>
     </div>
   </div>
