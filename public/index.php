@@ -7,7 +7,6 @@ include_once __DIR__ . '/../src/partials/header.php';
 
 <?php include_once __DIR__ . '/../src/partials/slider.php'?>
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
-<link rel="stylesheet" href="lib\css\all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <style>
   .modal-cnt-bg{
@@ -879,7 +878,7 @@ include_once __DIR__ . '/../src/partials/header.php';
     </div>
     <div>
 
-        <img src="img/VinFast - Future of mobility - Vf8&9 (1) (1)_1666170465.jpg" alt="" style="width:1454px;">
+        <img src="img/VinFast - Future of mobility - Vf8&9 (1) (1)_1666170465.jpg" alt="" style="width:145px;">
     </div>
 </div>
 </body>
