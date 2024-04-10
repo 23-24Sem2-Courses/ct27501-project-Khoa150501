@@ -1,135 +1,39 @@
-<?php
-include_once __DIR__ . '/../src/partials/header.php';
+<?php require_once "./public/partials/header.php" ?>
 
-?>
+<?php require_once "./public/partials/navbar.php" ?>
 
-<?php include_once __DIR__ . '/../src/partials/navbar.php'?>
+<?php require_once "./public/partials/slider.php" ?>
 
+<link rel="stylesheet" href="/public/css/style.css">
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
-<link rel="stylesheet" href="lib\css\all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<style>
-  .modal-cnt-bg{
-    background-color: #3C3C3C;
-    color: aliceblue;
-}
-.modal-body img {
-   max-width: 1000px;
-}
-.modal-body {
-  justify-content: center;
-  text-align: center;
-
-}
-.modal-in-cnt h5{
-    border-bottom: 1px solid wheat;
-    width: 200px;
-    margin-left: 40%;
-}
-.card-body>button a{
-    color: aliceblue;
-    text-decoration: none;
-}
-.boder-card-ct-vf7{
-  text-align: start;
-  border: 1px solid #00CED1;
-  border-radius: 10px;
-}
-.boder-card-ct-vf7>h2{
-  margin-left: 40px;
-  font-style: oblique;
-  font-weight: bold;
-}
-#dangkyForm{
-  width: 500px;
-  text-align: center;
-  border: 1px solid #668B8B;
-  border-radius: 5px;
-  padding: 10px;
-  
-}
-#dangkyFormvf6{
-  width: 500px;
-  text-align: center;
-  border: 1px solid #668B8B;
-  border-radius: 5px;
-  padding: 10px;
-  
-}
-#dangkyFormvf8{
-  width: 500px;
-  text-align: center;
-  border: 1px solid #668B8B;
-  border-radius: 5px;
-  padding: 10px;
-  
-}
-#dangkyFormvf9{
-  width: 500px;
-  text-align: center;
-  border: 1px solid #668B8B;
-  border-radius: 5px;
-  padding: 10px;
-  
-}
-.product-slider img{
-    max-width: 1400px;
-
-}
-.product-slide-cnt-in{
-    margin-bottom: 500px;
-}
-.product-slide-cnt-in h1{
-    font-style: italic;
-    font-style: bold;
-}
-.product-slide-cnt-in button>a{
-    text-decoration: none;
-}
-</style>
-
 <body>
-<div id="carouselExampleCaptions" class="carousel slide">
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    
-      <div class="carousel-caption d-none d-md-block">
-        <div class="product-slide-cnt-in">
-        <h1>VF-E43</h1>
-        <h5>Cùng bạn bứt phá mọi thử thách</h5>
-        <button  type="button" class="btn btn-primary"> 
-        <a href="#" class="text-light">Đặt cọc <br>50.000.000 VND</a>
-        </button>
-        </div>
-      </div>
-      
-      <img src="img/slider/library_7.png" class="d-block w-100" alt="...">
-    </div>
-  </div>
 </div>
     <div class="content mt-4">
       <div class="row">
-        <div class="col bo-loc">
-        <h1>Bộ lọc theo giá tiền</h1>
-  <div class="filter">
-    <label for="priceFilter">Lọc theo giá tiền:</label>
-    <select id="priceFilter">
-      <option value="all">Tất cả</option>
-      <option value="100000000">Dưới 100 triệu</option>
-      <option value="200000000">Dưới 200 triệu</option>
-      <option value="300000000">Dưới 300 triệu</option>
-      <option value="500000000">Dưới 500 triệu</option>
-    </select>
-  </div>
-  <div class="show" ></div>
+
+
+        <div class="col mt-5">
+          <h5>Bảo hành & Dịch vụ</h5>
+          <div class="bordet-test mb-2">
+          <p>Bảo hành</p>
+          </div>
+          <div class="bordet-test mb-2">
+          <p>Bảo hành</p>
+          </div>
+          <div class="bordet-test mb-2">
+          <p>Bảo hành</p>
+          </div>
+          <div class="bordet-test mb-2">
+          <p>Bảo hành</p>
+          </div>
         </div>
 
         <!-- card col-1-->
-        <div class="col" id="container-product-vf">
+        <div class="col">
         
-          <div class="card mt-2 " style="width: 28rem;" class="product" price-data="100000000">
-          <img src="img/img-vf7/vf-7.png" class="card-img-top" alt="...">
+          <div class="card mt-2 " style="width: 28rem;">
+          <img src="/public/img/img-vf7/vf-7.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">VF-7</h5>
             <p class="card-text">VF 7 là một bước tiến đột phá trong thiết kế xe ô tô của VinFast.</p>
@@ -149,8 +53,8 @@ include_once __DIR__ . '/../src/partials/header.php';
             </button>
           </div>
         </div>
-        <div class="card mt-2" style="width: 28rem;" class="product" price-data="200000000">
-          <img src="img/vf6/vf-6.png" class="card-img-top" alt="...">
+        <div class="card mt-2" style="width: 28rem;">
+          <img src="/public/img/vf6/vf-6.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">VF-6</h5>
             <p class="card-text">Cùng VF 6 ghi dấu từng khoảnh khắc, khởi đầu mọi hành trình.</p>
@@ -173,8 +77,8 @@ include_once __DIR__ . '/../src/partials/header.php';
       </div>
       <!-- card col-2-->
         <div class="col">
-          <div class="card mt-2" style="width: 28rem;" class="product" price-data="300000000">
-            <img src="img/vf8/vf-8.png" class="card-img-top" alt="...">
+          <div class="card mt-2" style="width: 28rem;">
+            <img src="/public/img/vf8/vf-8.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">VF-8</h5>
               <p class="card-text">VF 8 đạt đến sự kết hợp hoàn hoàn hảo giữa chất lượng và giá trị</p>
@@ -194,8 +98,8 @@ include_once __DIR__ . '/../src/partials/header.php';
               </button>
             </div>
           </div>  
-          <div class="card mt-2 mb-2" style="width: 28rem;"class="product" price-data="400000000">
-            <img src="img/vf9/vf-9.png" class="card-img-top" alt="...">
+          <div class="card mt-2 mb-2" style="width: 28rem;">
+            <img src="/public/img/vf9/vf-9.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">VF-9</h5>
               <p class="card-text">VF 9 là mẫu xe SUV 7 chỗ hàng đầu của VinFast.</p>
@@ -227,7 +131,7 @@ include_once __DIR__ . '/../src/partials/header.php';
         </div>
         <div class="modal-body">
         <h3>  VF 7 là một bước tiến đột phá trong thiết kế xe ô tô của VinFast.</h3><br>
-          <img src="img/img-vf7/vf7-hero-car.png" alt="">
+          <img src="/public/img/img-vf7/vf7-hero-car.png" alt="">
           <div class="modal-in-cnt">
           <h5>Thông số chi tiết</h5><br>
             <p>Nội thất rộng rãi (Chiều dài cơ sở 2.840 mm, Dài x Rộng x Cao tương đương 4.545 x 1.890 x 1.635,75 mm)</p>
@@ -236,14 +140,14 @@ include_once __DIR__ . '/../src/partials/header.php';
             <p>Tăng tốc 0 - 100 km/h trong 5,8 s *</p>
           <h2>Triết lý thiết kế “Vũ trụ phi đối xứng</h2><br>
             <p>Lấy cảm hứng từ vũ trụ và các vật thể bay trong không gian, VF 7 hiện thân cho sự tự do, công nghệ, thời đại, cá tính, mạnh mẽ và thể thao, thoả mãn mọi tâm hồn đam mê thẩm mỹ và tốc độ.</p>
-              <img src="img/img-vf7/vf7-img-removebg-preview.png" alt="">
+              <img src="/public/img/img-vf7/vf7-img-removebg-preview.png" alt="">
 
           <h2>Thiết kế nội thất hướng tới người lái.</h2><br>
-          <img src="img/img-vf7/vf7-noi-that-overview.png" alt=""> <br>
+          <img src="/public/img/img-vf7/vf7-noi-that-overview.png" alt=""> <br>
 
           <h2>Tiện nghi thông minh tích hợp trên màn hình giải trí</h2> <br>
           <p>Với kích cỡ 12,9 inch, có thể tùy chỉnh cá nhân hóa theo người dùng. Màn hình giải trí cảm ứng của VF 7 có thể giúp điều khiển các chức năng trên xe bằng cách vuốt/chạm nhẹ hoặc ra lệnh cho trợ lý ảo qua giọng nói.</p>
-          <img src="img/img-vf7/vf7-tien-nghi-3.png" alt="">
+          <img src="/public/img/img-vf7/vf7-tien-nghi-3.png" alt="">
 
 
           <h2>Hệ thống trợ lái nâng cao</h2> <br>
@@ -268,7 +172,7 @@ include_once __DIR__ . '/../src/partials/header.php';
               <br>
               </div>
               <div class="col" >
-                <img src="img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
+                <img src="/public/img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
               </div>
             </div> <br> <br>
             <div id="dangkyForm" style="display: none;" class="bg-dark m-auto">
@@ -393,7 +297,7 @@ include_once __DIR__ . '/../src/partials/header.php';
         </div>
         <div class="modal-body">
         <h3> Cùng VF 6 ghi dấu từng khoảnh khắc,khởi đầu mọi hành trình.</h3><br>
-          <img src="img/vf6/vf-6.png" alt="">
+          <img src="/public/img/vf6/vf-6.png" alt="">
           <div class="modal-in-cnt">
           <h5>Thông số chi tiết</h5><br>
             <p>Nội thất rộng rãi (4.238 x 1.820 x 1.594)</p>
@@ -402,14 +306,14 @@ include_once __DIR__ . '/../src/partials/header.php';
             <p>Tăng tốc 0 - 100 km/h trong 5,8 s *</p>
           <h2>Triết lý thiết kế “Cặp đối lập tự nhiên”</h2><br>
             <p>VF 6 là tuyệt tác nghệ thuật được thiết kế dựa trên triết lý “Cặp đối lập tự nhiên”, tạo nên sự cân bằng hoàn hảo giữa các yếu tố tưởng chừng như đối lập: thú vị - tinh tế, công nghệ - con người.</p>
-              <img src="img/vf6/2023_vinfast_vf8.png" alt="">
+              <img src="/public/img/vf6/2023_vinfast_vf8.png" alt="">
 
           <h2>Thiết kế nội thất hướng tới người lái.</h2><br>
-          <img src="img/vf6/bottom-banner.png" alt=""> <br>
+          <img src="/public/img/vf6/bottom-banner.png" alt=""> <br>
 
           <h2>Tiện nghi thông minh tích hợp trên màn hình giải trí</h2> <br>
           <p>Với kích cỡ 12,9 inch, có thể tùy chỉnh cá nhân hóa theo người dùng. Màn hình giải trí cảm ứng của VF 6 có thể giúp điều khiển các chức năng trên xe bằng cách vuốt/chạm nhẹ hoặc ra lệnh cho trợ lý ảo qua giọng nói.</p>
-          <img src="img/vf6/VF6-mahinh.png" alt="">
+          <img src="/public/img/vf6/VF6-mahinh.png" alt="">
 
 
           <h2>Hệ thống trợ lái nâng cao</h2> <br>
@@ -434,7 +338,7 @@ include_once __DIR__ . '/../src/partials/header.php';
               <br>
               </div>
               <div class="col" >
-                <img src="img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
+                <img src="/public/img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
               </div>
             </div> <br> <br>
             <div id="dangkyFormvf6" style="display: none;" class="bg-dark m-auto">
@@ -545,7 +449,7 @@ include_once __DIR__ . '/../src/partials/header.php';
         </div>
         <div class="modal-body">
         <h3> VF 8 đạt đến sự kết hợp hoàn hoàn hảo giữa chất lượng và giá trị thông qua công nghệ cao cấp, kỹ thuật sản xuất đặc biệt và dịch vụ tận tâm.</h3><br>
-          <img src="img/vf8/vf-8.png" alt="">
+          <img src="/public/img/vf8/vf-8.png" alt="">
           <div class="modal-in-cnt">
             
           <h5>Thông số chi tiết</h5><br>
@@ -555,10 +459,10 @@ include_once __DIR__ . '/../src/partials/header.php';
             <p>Tăng tốc 0 - 100 km/h trong 5,5 s</p>
           <h2>Triết lý thiết kế “Vũ trụ phi đối xứng</h2><br>
             <p>Lấy cảm hứng từ vũ trụ và các vật thể bay trong không gian, VF 7 hiện thân cho sự tự do, công nghệ, thời đại, cá tính, mạnh mẽ và thể thao, thoả mãn mọi tâm hồn đam mê thẩm mỹ và tốc độ.</p>
-              <img src="img/vf8/vf8.png" alt="">
+              <img src="/public/img/vf8/vf8.png" alt="">
 
           <h2>Thiết kế nội thất hướng tới người lái.</h2><br>
-          <img src="img/vf8/vf8-preview.png" alt=""> <br>
+          <img src="/public/img/vf8/vf8-preview.png" alt=""> <br>
 
           <h2>Công nghệ cho cuộc sống</h2> <br>
           <p>Hợp tác cùng những đối tác hàng đầu trên toàn cầu, VinFast áp dụng những công nghệ hiện đại với thiết kế tập trung vào con người, đem lại trải nghiệm Trợ lý ảo cùng loạt Dịch vụ thông minh tiên tiến, đồng hành cùng bạn hướng tới tương lai tốt đẹp hơn.</p>
@@ -588,7 +492,7 @@ include_once __DIR__ . '/../src/partials/header.php';
               <br>
               </div>
               <div class="col" >
-                <img src="img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
+                <img src="/public/img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
               </div>
             </div> <br> <br>
             <div id="dangkyFormvf8" style="display: none;" class="bg-dark m-auto">
@@ -713,7 +617,7 @@ include_once __DIR__ . '/../src/partials/header.php';
         </div>
         <div class="modal-body">
         <h3>  VF 9 là một bước tiến đột phá trong thiết kế xe ô tô của VinFast.</h3><br>
-          <img src="img/vf9/vf-9.png" alt="">
+          <img src="/public/img/vf9/vf-9.png" alt="">
           <div class="modal-in-cnt">
           <h5>Thông số chi tiết</h5><br>
             <p>Nội thất rộng rãi (Chiều dài cơ sở 2.840 mm, Dài x Rộng x Cao tương đương 4.545 x 1.890 x 1.635,75 mm)</p>
@@ -722,14 +626,14 @@ include_once __DIR__ . '/../src/partials/header.php';
             <p>Tăng tốc 0 - 100 km/h trong 5,8 s *</p>
           <h2>Triết lý thiết kế “Vũ trụ phi đối xứng</h2><br>
             <p>VF 9 là mẫu xe SUV 7 chỗ hàng đầu của VinFast. Với kiểu dáng tinh tế, công nghệ tiên tiến nhất và sự tỉ mỉ trong từng chi tiết, VF 9 mang đến trải nghiệm đặc biệt cao cấp cho người sở hữu.</p>
-              <img src="img/vf9/Do-1.png" alt="">
+              <img src="/public/img/vf9/Do-1.png" alt="">
 
           <h2>Thiết kế nội thất hướng tới người lái.</h2><br>
-          <img src="img/vf9/interior_1.png" alt=""> <br>
+          <img src="/public/img/vf9/interior_1.png" alt=""> <br>
 
           <h2>Tiện nghi thông minh tích hợp trên màn hình giải trí</h2> <br>
           <p>Với kích cỡ 12,9 inch, có thể tùy chỉnh cá nhân hóa theo người dùng. Màn hình giải trí cảm ứng của VF 9 có thể giúp điều khiển các chức năng trên xe bằng cách vuốt/chạm nhẹ hoặc ra lệnh cho trợ lý ảo qua giọng nói.</p>
-          <img src="img/vf9/VF-9-Navy-White-MHU-A7304065.png" alt="">
+          <img src="/public/img/vf9/VF-9-Navy-White-MHU-A7304065.png" alt="">
 
 
           <h2>Hệ thống trợ lái nâng cao</h2> <br>
@@ -754,7 +658,7 @@ include_once __DIR__ . '/../src/partials/header.php';
               <br>
               </div>
               <div class="col" >
-                <img src="img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
+                <img src="/public/img/vf7-cactramsac.png " style="width: 100%" alt="Các trạm sạc"> <br> <br>
               </div>
             </div> <br> <br>
             <div id="dangkyFormvf9" style="display: none;" class="bg-dark m-auto">
@@ -870,8 +774,26 @@ include_once __DIR__ . '/../src/partials/header.php';
   </div>
       <!-- /Modal -->
     </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="script.js"></script>
+    <div class="container">
+  <div class="row mt-5">
+    <div class="col">
+     <img src="/public/img/library_2_bk.jpg" alt="" style="width:100px;">
+    </div>
+    <div class="col">
+      <h5>Thiết bị sạc di động</h5>
+      <div class="d-flex">
+            <p>VinFast cung cấp đa dạng giải pháp sạc để đáp ứng nhu cầu sử dụng của Khách hàng một cách thuận tiện nhất. <br> Khuyến cáo khách hàng sử dụng sạc chính hãng để hạn chế nguy cơ cháy nổ.</p>
+    
+    <img src="/public/img/sac-vinfast-9565.jpg" alt="" style="width:300px;">
+    </div>
+    </div>
+    </div>
+    </div>
+    <div>
+
+        <img src="/public/img/VinFast - Future of mobility - Vf8&9 (1) (1)_1666170465.jpg" alt="" style="width:145px;">
+    </div>
+</div>
 </body>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -923,9 +845,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-<script>
+<!-- <script>
 document.getElementById("dangky_Test").addEventListener("click", function() {
   window.location.href = "dangkylaithu.php"; 
 });
-</script>
-<?php include_once __DIR__ . '/../src/partials/footer.php' ?>
+</script> -->
+
+
+
+<?php require_once "./public/partials/footer.php" ?>

@@ -1,0 +1,169 @@
+/*HOMEPAGE*/
+.modal-cnt-bg{
+    background-color: #3C3C3C;
+    color: aliceblue;
+}
+.modal-body img {
+   max-width: 1000px;
+}
+.modal-body {
+  justify-content: center;
+  text-align: center;
+
+}
+.modal-in-cnt h5{
+    border-bottom: 1px solid wheat;
+    width: 200px;
+    margin-left: 40%;
+}
+.card-body>button a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.boder-card-ct-vf7{
+  text-align: start;
+  border: 1px solid #00CED1;
+  border-radius: 10px;
+}
+.boder-card-ct-vf7>h2{
+  margin-left: 40px;
+  font-style: oblique;
+  font-weight: bold;
+}
+#dangkyForm{
+  width: 500px;
+  text-align: center;
+  border: 1px solid #668B8B;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+#dangkyFormvf6{
+  width: 500px;
+  text-align: center;
+  border: 1px solid #668B8B;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+#dangkyFormvf8{
+  width: 500px;
+  text-align: center;
+  border: 1px solid #668B8B;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+#dangkyFormvf9{
+  width: 500px;
+  text-align: center;
+  border: 1px solid #668B8B;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+.bo-loc img:hover{
+  transform: scale(1.2);
+}
+.bo-loc img{
+    width: 100px;
+    transition-duration: 0.3s;
+}
+.bordet-test{
+  width: 200px;
+  height: 100px;
+  border: 1px solid red;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  margin-left: 100px;
+  background-color: #668B8B;
+}
+.bordet-test:hover{
+  transform: scale(1.1);
+}
+/*Navbar*/
+#img-logo{
+    cursor: pointer;
+  }
+  .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  position: relative;
+  display: inline-block;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+.menu ul li a img{
+  width: 200px;
+}
+/* #dropdown-cars{
+  display: flex;
+  text-align: center;
+} */
+.menu ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+.menu ul li ul li {
+  display: block;
+}
+
+.menu ul li ul li a {
+  padding: 10px 20px;
+}
+
+.menu ul li ul li:hover {
+  background-color: aliceblue;
+}
+
+
+
+/*Dichvu*/
+#suachua_ctn img{
+    width: 500px;
+    margin-bottom: 100px;
+}
+.container-dichvu>h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid black;
+    max-width: 500px;
+}
+/*product*/
+
+.product-slider img{
+  max-width: 1400px;
+
+}
+.product-slide-cnt-in{
+  margin-bottom: 500px;
+}
+.product-slide-cnt-in h1{
+  font-style: italic;
+  font-style: bold;
+}
+.product-slide-cnt-in button>a{
+  text-decoration: none;
+}
+/*tram sac*/
+
+/*dangkylaithu*/

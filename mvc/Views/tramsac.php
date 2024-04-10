@@ -1,9 +1,5 @@
-<?php
-include_once __DIR__ . '/../src/partials/header.php';
-
-?>
-
-<?php include_once __DIR__ . '/../src/partials/navbar.php'?>
+<?php require_once "./public/partials/header.php" ?>
+<?php require_once "./public/partials/navbar.php" ?>
 
 
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
@@ -18,7 +14,7 @@ include_once __DIR__ . '/../src/partials/header.php';
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="/Home/homepage">Trang chủ</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Trạm sạc</li>
             </ol>
         </nav>
@@ -39,4 +35,4 @@ include_once __DIR__ . '/../src/partials/header.php';
     
 </body>
 
-<?php include_once __DIR__ . '/../src/partials/footer.php' ?>
+<?php require_once "./public/partials/footer.php" ?>

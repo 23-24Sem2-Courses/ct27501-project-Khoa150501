@@ -1,18 +1,20 @@
 <?php
-include_once __DIR__ . '/../src/partials/header.php';
+require_once "./public/partials/header.php"
 
 ?>
 
-<?php include_once __DIR__ . '/../src/partials/navbar.php'?>
+<?php 
+require_once "./public/partials/navbar.php"
+?>
 
-
+<link rel="stylesheet" href="/public/css/style.css">
 <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <body>
 <br>
     <br>
     <br>
-  <div class="container">
+  <div class="container-dichvu">
   <nav aria-label="breadcrumb" >
         <ol class="breadcrumb" >
           <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
@@ -33,28 +35,12 @@ include_once __DIR__ . '/../src/partials/header.php';
         </ul>
     </div>
     <div class="col">
-      <img src="img/suachuachung.png" alt="sua chua chung">
+      <img src="/public/img/suachuachung.png" alt="sua chua chung">
     </div>
   </div>
 </div>
   </div>
-
-    
-    
 </body>
-<style>
-#suachua_ctn img{
-    width: 500px;
-    margin-bottom: 100px;
-}
-h1{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-bottom: 2px solid black;
-    max-width: 500px;
-}
 
-</style>
 
-<?php include_once __DIR__ . '/../src/partials/footer.php' ?>
+<?php require_once "./public/partials/footer.php" ?>
