@@ -4,28 +4,89 @@
 
 <?php require_once "./public/partials/slider.php" ?>
 
+
 <link rel="stylesheet" href="/public/css/style.css">
-<script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
+<link rel="stylesheet" href="/public/css/style1.css">
+<!-- <script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<style>
+  body{
+    background-color: #F8FAFA;
+  }
+</style>
 <body>
+
+<!-- Modal dự tính phí -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Dự tính phí</h1>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="color: white;"></i></button>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+      <div class="container">
+  <h1>Bảng tính tổng số tiền</h1>
+  <select id="dropdown">
+    <?php foreach ($options as $option): ?>
+        <option value="<?= $option['car_id'] ?>"><?= $option['vf-7'] ?></option>
+    <?php endforeach; ?>
+</select>
+  <div class="form">
+    <div class="input-group">
+      <label for="price">Giá niêm yết:</label>
+      <input type="number" id="price" readonly>
+    </div>
+    <div class="input-group">
+      <label for="registrationFee">Phí đăng kiểm:</label>
+      <input type="number" id="registrationFee">
+    </div>
+    <div class="input-group">
+      <label for="licenseFee">Phí biển số:</label>
+      <input type="number" id="licenseFee">
+    </div>
+    <div class="input-group">
+      <label for="insuranceFee">Phí Bảo hiểm:</label>
+      <input type="number" id="insuranceFee">
+    </div>
+    <button id="calculateBtn">Tính</button>
+    <div id="total"></div>
+  </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="/public/js/javascrip.js"></script>
 </div>
     <div class="content mt-4">
       <div class="row">
 
 
-        <div class="col mt-5">
-          <h5>Bảo hành & Dịch vụ</h5>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
+        <div class="col mt-5 justify-content-center align-content-between">
+          <div class="bordet-test mb-2" id="link-tragop">
+            <img src="/public//img/7992-converted-03.png" alt="" style="max-width: 70px;">
+          <p>Mua xe trả góp</p>
           </div>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
+          <div class="bordet-test mb-2" id="link-banggiaxe">
+          <img src="/public//img/7992-converted-01.png" alt="" style="max-width: 70px;">
+          <p>Bảng giá xe</p>
           </div>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
+          <div class="bordet-test mb-2" id="link-testDrive">
+          <img src="/public/img/7992-converted-04.png" alt="" style="max-width: 70px;">
+          <p>Đăng ký lái thử</p>
           </div>
-          <div class="bordet-test mb-2">
-          <p>Bảo hành</p>
+          <div class="bordet-test mb-2" id="link-tinhphi" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <img src="/public/img/7992-converted-02.png" alt="" style="max-width: 70px;">
+         
+          <p>Dự tính phí</p>
+
           </div>
         </div>
 
@@ -57,7 +118,7 @@
           <img src="/public/img/vf6/vf-6.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">VF-6</h5>
-            <p class="card-text">Cùng VF 6 ghi dấu từng khoảnh khắc, khởi đầu mọi hành trình.</p>
+            <p class="card-text">VF 6 ghi dấu từng khoảnh khắc, khởi đầu mọi hành trình.</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Dòng xe: C-SUV </li>
@@ -102,7 +163,7 @@
             <img src="/public/img/vf9/vf-9.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">VF-9</h5>
-              <p class="card-text">VF 9 là mẫu xe SUV 7 chỗ hàng đầu của VinFast.</p>
+              <p class="card-text">VF 9 là mẫu xe SUV 7 chỗ hàng đầu của VinFast. </p> 
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Dòng xe: E-SUV </li>
@@ -774,13 +835,22 @@
   </div>
       <!-- /Modal -->
     </div>
-    <div class="container">
-  <div class="row mt-5">
+    <div class="container" style="border-top:1px solid #D9D9D9; margin-top:100px;">
+  <div class="row mt-5" >
     <div class="col">
-     <img src="/public/img/library_2_bk.jpg" alt="" style="width:100px;">
+          <div class="image-container">
+            <img src="/public/img/VF-e34-Cam-sac.png" alt="Your Image" style="width:500px;">
+            <div class="overlay">
+              <div class="overlay-text">
+              <h3>Thuê pin ô tô điện linh hoạt</h3>
+              <p>Với phương châm luôn đặt lợi ích Khách hàng lên hàng đầu, VinFast áp dụng chính sách cho thuê pin độc đáo, ưu việt và khác biệt với tất cả các mô hình cho thuê pin từ trước tới nay trên thế giới.</p>
+              <p></p>
+              </div>
+            </div>
+        </div>
     </div>
     <div class="col">
-      <h5>Thiết bị sạc di động</h5>
+      <h3>Thiết bị sạc di động</h3>
       <div class="d-flex">
             <p>VinFast cung cấp đa dạng giải pháp sạc để đáp ứng nhu cầu sử dụng của Khách hàng một cách thuận tiện nhất. <br> Khuyến cáo khách hàng sử dụng sạc chính hãng để hạn chế nguy cơ cháy nổ.</p>
     
@@ -789,62 +859,33 @@
     </div>
     </div>
     </div>
-    <div>
-
-        <img src="/public/img/VinFast - Future of mobility - Vf8&9 (1) (1)_1666170465.jpg" alt="" style="width:145px;">
-    </div>
-</div>
+          <div class="overlay-content-vf">
+            <div class="image-container" >
+                    <img src="/public/img/27de1554.jpg" alt="Your Image" style="max-width:600px; ">
+                    <div class="overlay">
+                      <div class="overlay-text">
+                      <h3>Hệ thống Showroom toàn quốc</h3>
+                      <p>VinFast Rennes là cửa hàng thứ 3 của VinFast tại Pháp. Sau Rennes, các cửa hàng tiếp theo sẽ lần lượt được triển khai tại Montpellier, Aix-En-Provence và các thành phố lớn khác nhằm mở rộng mạng lưới bán lẻ và dịch vụ, kết nối và xây dựng niềm tin với khách hàng Pháp.</p>
+                      <p></p>
+                      </div>
+                    </div>
+                </div>
+                <div class="image-container" style="margin-top:100px;">
+                    <img src="/public/img/VF 6_1_phuãnh.jpg" alt="Your Image" style="max-width:600px; ">
+                    <div class="overlay">
+                      <div class="overlay-text">
+                      <h3>Phủ xanh tương lai</h3>
+                      <p>Với phương châm luôn đặt lợi ích Khách hàng lên hàng đầu, VinFast áp dụng chính sách cho thuê pin độc đáo, ưu việt và khác biệt với tất cả các mô hình cho thuê pin từ trước tới nay trên thế giới.Dự án Phủ xanh Tương lai là minh chứng cho cam kết mạnh mẽ của VinFast hướng tới cuộc cách mạng di chuyển điện hóa và một tương lai xanh trên toàn cầu. Một trong những mục tiêu của dự án là hiện thực hóa ‘món quà’ từ những khách hàng tiên phong dành cho môi trường, cùng chung tay kiến tạo một tương lai phát triển bền vững cho tất cả.
+</p>
+                      <p></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+</div> 
 </body>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("dangkyBtn").addEventListener("click", function() {
-    // Hiển thị form Đăng ký khi bấm vào nút "Đăng ký tư vấn"
-    document.getElementById("dangkyForm").style.display = "block";
+<script src="/public//js/jscrip.js"></script>
 
-    // Cuộn trang đến phần form Đăng ký
-    document.getElementById("dangkyForm").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  });
-});
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("dangkyBtnvf6").addEventListener("click", function() {
-    // Hiển thị form Đăng ký khi bấm vào nút "Đăng ký tư vấn"
-    document.getElementById("dangkyFormvf6").style.display = "block";
-
-    // Cuộn trang đến phần form Đăng ký
-    document.getElementById("dangkyFormvf6").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  });
-});
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("dangkyBtnvf8").addEventListener("click", function() {
-    // Hiển thị form Đăng ký khi bấm vào nút "Đăng ký tư vấn"
-    document.getElementById("dangkyFormvf8").style.display = "block";
-
-    // Cuộn trang đến phần form Đăng ký
-    document.getElementById("dangkyFormvf8").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  });
-});
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("dangkyBtnvf9").addEventListener("click", function() {
-    // Hiển thị form Đăng ký khi bấm vào nút "Đăng ký tư vấn"
-    document.getElementById("dangkyFormvf9").style.display = "block";
-
-    // Cuộn trang đến phần form Đăng ký
-    document.getElementById("dangkyFormvf9").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  });
-});
-</script>
 <!-- <script>
 document.getElementById("dangky_Test").addEventListener("click", function() {
   window.location.href = "dangkylaithu.php"; 

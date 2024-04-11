@@ -9,6 +9,7 @@ class Controllers{
         require_once "./mvc/Views/".$view.".php";
         // return new $view
     }
+    
 }
 
 ?>
