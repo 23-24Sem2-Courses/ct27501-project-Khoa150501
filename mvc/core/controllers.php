@@ -6,8 +6,8 @@ class Controllers{
     }
 
     public function views($view, $data=[]){
-        require_once "./mvc/Views/".$view.".php";
-        // return new $view
+        // Lấy đường dẫn URL hiện tại
+        require_once "./mvc/Views/pages/".$view.".php";
     }
     
 }

@@ -4,20 +4,20 @@ class App{
 
     protected $controllers;
     protected $action;
-    protected $params;
+    protected $params=[];
     protected $router;
     function __construct(){
 
 
-        // global $router;
+        global $router;
 
-        // $this->router = new Router();
+        $this->router = new Router();
 
-        // if(!empty($router['default_controller'])){
-        //     $this->controllers= $router['default_controller'];
-        // }
-        // $this->action = '';
-        // $this->params = [];
+        if(!empty($router['default_controller'])){
+            $this->controllers= $router['default_controller'];
+        }
+        $this->action = '';
+        $this->params = [];
 
         $arr = $this->XuLyURL();
 
