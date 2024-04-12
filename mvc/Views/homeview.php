@@ -71,19 +71,19 @@
 
         <div class="col mt-5 justify-content-center align-content-between">
           <div class="bordet-test mb-2" id="link-tragop">
-            <img src="/public//img/7992-converted-03.png" alt="" style="max-width: 70px;">
+            <img src="../public//img/7992-converted-03.png" alt="" style="max-width: 70px;">
           <p>Mua xe trả góp</p>
           </div>
           <div class="bordet-test mb-2" id="link-banggiaxe">
-          <img src="/public//img/7992-converted-01.png" alt="" style="max-width: 70px;">
+          <img src="../public//img/7992-converted-01.png" alt="" style="max-width: 70px;">
           <p>Bảng giá xe</p>
           </div>
           <div class="bordet-test mb-2" id="link-testDrive">
-          <img src="/public/img/7992-converted-04.png" alt="" style="max-width: 70px;">
+          <img src="../public/img/7992-converted-04.png" alt="" style="max-width: 70px;">
           <p>Đăng ký lái thử</p>
           </div>
           <div class="bordet-test mb-2" id="link-tinhphi" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img src="/public/img/7992-converted-02.png" alt="" style="max-width: 70px;">
+          <img src="../public/img/7992-converted-02.png" alt="" style="max-width: 70px;">
          
           <p>Dự tính phí</p>
 
@@ -883,6 +883,11 @@
                 </div>
             </div>
 </div> 
+<?php 
+  while($row = mysqli_fetch_array($data["Tong"])){
+    echo $row["name"];
+}
+?>
 </body>
 <script src="/public//js/jscrip.js"></script>
 
