@@ -29,13 +29,13 @@
                 </li>
                 <li class="sidebar-item">
                     <a href="/admin/AdminShowFormDKTest" class="sidebar-link">
-                        <i class="lni lni-car-alt"></i>
+                    <i class="lni lni-pie-chart"></i>
                         <span>Đăng ký lái thử</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="/admin/AdminshowUser" class="sidebar-link">
-                        <i class="lni lni-car-alt"></i>
+                    <a href="/admin/AdminShowFormTuVan" class="sidebar-link">
+                        <i class="lni lni-popup"></i>
                         <span>Quản lý lịch tư vấn</span>
                     </a>
                 </li>

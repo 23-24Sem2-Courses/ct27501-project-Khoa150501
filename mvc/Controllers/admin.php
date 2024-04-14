@@ -41,6 +41,12 @@ class admin extends Controllers{
 
         require_once "./mvc/Views/pages/AdminTestDrive.php";
     }
+    public function AdminShowFormTuVan(){
+        $userTuVan = new User();
+        $user = $userTuVan->getAllTuVan();
+
+        require_once "./mvc/Views/pages/AdminTuVan.php";
+    }
     // public function deleteUser() {
 
     //     // $userModel = new XoaUser();

@@ -15,7 +15,7 @@ body {
   box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
 }
 
-.container-max-widths: {
+.container-max-widths {
   sm: 540px;
   md: 720px;
   lg: 960px;

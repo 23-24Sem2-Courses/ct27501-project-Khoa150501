@@ -8,7 +8,7 @@
     <!--adminUser-->
     <div class="main p-4">
             <h1 class="pt-5">
-                Quản lý người dùng
+                Quản lý tư vấn
             </h1>
             <br>
             <div class=" justify-content-between mb-3">
@@ -26,11 +26,10 @@
                 <thead class="table-dark">
                 <tr class="text-center">
                     <th>Mã</th>
-                    <th>Họ và tên</th>
                     <th>Email</th>
+                    <th>Họ và tên</th>
                     <th>Số điện thoại</th>
-                    <th>Địa chỉ</th>
-                    <th>Password</th>
+                    <th>ghiChu</th>
                     <th>Thao tác</th>
                 </tr>
                 </thead>
@@ -38,30 +37,16 @@
                     <?php foreach($user as $use): ?>
                     <tr> 
                         <td  ><?= $use['id'] ?></td>
-                        <td  ><?= $use['fullname'] ?></td>
                         <td  ><?= $use['email'] ?> </td> 
-                        <td  ><?= $use['phone_number'] ?></td>
-                        <td  ><?= $use['address'] ?></td>
-                        <td  ><?= $use['password'] ?></td>
+                        <td  ><?= $use['fulname'] ?></td>
+                        <td  ><?= $use['phonenumber'] ?></td>
+                        <td  ><?= $use['ghiChu'] ?></td>
                         <td>
                             <!-- The Modal -->
                             <div class="d-flex">
                             <p class="text-center"><button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#myModalEdit">
                                 <i class="fa-solid fa-pen-to-square"></i></button>            
                             <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
-                           <!-- <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#myModalEdit">
-                                <a href="/admin/editUserForm?action=update"> <i class="fa-solid fa-pen-to-square"></i></a></button> 
-                                <button type="submit" class="btn btn-danger btn-sm ml-1" ><i class="fa-solid fa-trash" ></i></button> -->
-
-
-                                <!-- <a href="deleteUser.php?id=><i class="fa-solid fa-trash" ></i></a> -->
-                                <!-- <a href="deleteData?action=delete&id=2" ><i class="fa-solid fa-trash" ></i></a> -->
-                                
-                                <!-- <form method="post" action="deleteData">
-                                <input type="hidden" name="action" value="delete">
-                                <input type="hidden" name="id" value="3">
-                                <button type="submit" class="btn btn-danger btn-sm ml-1" ><i class="fa-solid fa-trash" ></i></button>
-                                </form> -->
                          
                         </div>
                         </td>

@@ -46,6 +46,11 @@ class User extends DB {
         }
         return false; 
     }
+    public function getAllTuVan() {
+        $stmt = $this->conn->prepare("SELECT * FROM tuvanform");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     
 }
 ?>
@@ -101,6 +106,7 @@ class UserNew extends DB{
         $stmt->bindParam(':password', $password);
         return $stmt->execute();
     }
+
     
 
   
