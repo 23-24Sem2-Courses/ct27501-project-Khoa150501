@@ -47,9 +47,10 @@
                             <!-- The Modal -->
                             <div class="d-flex">
                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#myModalEdit">
-                                <a href="/admin/editUserForm?action=update"> <i class="fa-solid fa-pen-to-square"></i></a></button>   
-                             
-                                <a href="deleteData?action=delete&id=2" ><i class="fa-solid fa-trash" ></i></a>
+                                <a href="/admin/editUserForm?action=update"> <i class="fa-solid fa-pen-to-square"></i></a></button> 
+
+                                <a href="deleteUser.php?id=<?php echo $use['id']; ?>"><i class="fa-solid fa-trash" ></i></a>
+                                <!-- <a href="deleteData?action=delete&id=2" ><i class="fa-solid fa-trash" ></i></a> -->
                                 
                                 <!-- <form method="post" action="deleteData">
                                 <input type="hidden" name="action" value="delete">

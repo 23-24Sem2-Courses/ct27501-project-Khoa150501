@@ -85,7 +85,7 @@
 </nav>
     </div>
     <div class="col mt-2" >
-    <a class="nav-link" href="/DangNhap/dangnhap"><i class="fa fa-user"></i> Tài Khoản</a>
+    <a class="nav-link" href="/DangNhap/Login"><i class="fa fa-user"></i> Tài Khoản</a>
     </div>
     <div class="col-2 mt-2">
     <button type="button" class="btn btn-primary"  id="dangky_Test">Đăng ký lái thử</button>

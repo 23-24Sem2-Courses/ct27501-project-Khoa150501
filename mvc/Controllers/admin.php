@@ -25,7 +25,7 @@ class admin extends Controllers{
     public function editUserForm($id) {
         // Lấy thông tin người dùng từ CSDL dựa trên ID
         $userModel = new UserNew ();
-        $use = $userModel->getUserByID($id);
+        // $use = $userModel->getUserByID($id);
         // Hiển thị form sửa thông tin người dùng
         require_once "./mvc/Views/pages/editUser.php";
     }
@@ -35,22 +35,23 @@ class admin extends Controllers{
         // $this->views("product");
         require_once "./mvc/Views/pages/AdminProduct.php";
     }
-    public function deleteData($id) {
-        $userModel = new XoaUser();
-        if ($userModel->deleteUserID($id)) {
-            echo "Dữ liệu đã được xóa thành công.";
-        } else {
-            echo "Có lỗi xảy ra khi xóa dữ liệu.";
-        }
+    public function AdminShowFormDKTest(){
+        $carsModel = new CarsModel();
+        $cars = $carsModel->FormTestDrive();
+
+        require_once "./mvc/Views/pages/AdminTestDrive.php";
     }
+    // public function deleteUser() {
+
+    //     // $userModel = new XoaUser();
+    //     // $user = $userModel->deleteUser();
+    //     $this->views("AdminUser");
+
+        // require_once "./mvc/Views/pages/AdminUser.php";
+  
 }
 
-// Xử lý yêu cầu xóa dữ liệu
-if (isset($_GET['action']) && $_GET['action'] == 'delete') {
-    $homeController = new admin();
-    $id = $_GET['id']; // Lấy ID từ request
-    $homeController->deleteData($id);
-}
+// }
   
  
 ?>

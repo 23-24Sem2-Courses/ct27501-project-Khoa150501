@@ -21,7 +21,7 @@
 // }
 $loggedin = false;
 $error_message = false;
-
+function checkAdmin(){
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($_POST['username']) && !empty($_POST['password'])) {
@@ -36,5 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $error_message = 'Hãy đảm bảo rằng bạn cung cấp đầy đủ địa chỉ email và mật khẩu!';
     }
+}
 }
 ?>

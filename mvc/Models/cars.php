@@ -3,6 +3,7 @@ require_once "./mvc/core/DB.php";
 
 class CarsModel extends DB {
     private $table_name = 'cars';
+    private $table_name2 = 'testDrive';
     public function getAllCars() {
         $stmt = $this->conn->prepare("SELECT * FROM cars");
         $stmt->execute();
@@ -28,6 +29,11 @@ class CarsModel extends DB {
         $stmt->bindParam(':nameCars', $carName);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    public function FormTestDrive() {
+        $stmt = $this->conn->prepare("SELECT * FROM testDrive");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 ?>

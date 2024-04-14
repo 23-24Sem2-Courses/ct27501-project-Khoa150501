@@ -2,11 +2,49 @@
 require_once "./mvc/core/DB.php";
 
 class User extends DB {
-   
+    private $table_name = "user";
     public function getAllUser() {
         $stmt = $this->conn->prepare("SELECT * FROM user");
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function register( $fullname, $email,  $password, $phone_number, $address) {
+        $query = "INSERT INTO " . $this->table_name . " (fullname, email, phone_number, address, password)
+         VALUES (:id, :fullname, :email, :phone_number, :address, :password)";
+        $stmt = $this->conn->prepare($query);
+
+        // Chuyển đổi các giá trị để tránh tấn công SQL injection
+        $fullname = htmlspecialchars(strip_tags($fullname));
+        $email = htmlspecialchars(strip_tags($email));
+        $password = htmlspecialchars(strip_tags($password));
+        $phone_number = htmlspecialchars(strip_tags($phone_number));
+        $address = htmlspecialchars(strip_tags($address));
+
+        // Gán các giá trị vào các tham số của truy vấn
+        $stmt->bindParam(':fullname', $fullname);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':phone_number', $phone_number);
+        $stmt->bindParam(':address', $address);
+
+        // Thực thi truy vấn
+        if ($stmt->execute()) {
+            return true; // Trả về true nếu thêm thành công
+        } else {
+            echo "Mã này sai hoặc đã tồn tại";
+            return false; // Trả về false nếu có lỗi xảy ra
+        }
+    }
+
+    // Hàm đăng nhập
+    public function login($fullname, $password) {
+        $stmt = $this->conn->prepare("SELECT id, fullname, password FROM user WHERE fullname = ?");
+        $stmt->execute([$fullname]);
+        $user = $stmt->fetch();
+        if ($user && password_verify($password, $user['password'])) {
+            return $user; 
+        }
+        return false; 
     }
     
 }
@@ -50,21 +88,6 @@ class UserNew extends DB{
             return false; // Trả về false nếu có lỗi xảy ra
         }
     }
-    public function getUserByID($id) {
-       
-        // $query = "SELECT * FROM " . $this->table_name . " WHERE id = :id";
-        // $stmt = $this->conn->prepare($query);
-        // $stmt->bindParam(':id', $id);
-        // $stmt->execute();
-        // return $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        $id_str = implode('id', $id);
-        // Sử dụng câu lệnh SQL có điều kiện IN để lấy các bản ghi có ID nằm trong mảng $id
-        $query = "SELECT * FROM user WHERE id IN ($id_str)";
-        $stmt = $this->conn->prepare($query);
-        // $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
 
     // Phương thức cập nhật thông tin người dùng
     public function updateUser($id, $fullname, $email, $phone_number, $address, $password) {
@@ -84,32 +107,33 @@ class UserNew extends DB{
 }
 ?>
 <?php
-require_once "./mvc/core/DB.php";
-class XoaUser extends DB{
 
-public function deleteUserID($idUser) {
-// Kiểm tra xem yêu cầu xóa đã được gửi từ form hay không
-if(isset($_POST['deleteUser'])) {
-    // Lấy ID của người dùng cần xóa từ form
-    $userId = $_POST['id'];
-   
-    // Query xóa dữ liệu từ bảng users (giả sử bảng tên là users và trường ID tên là id)
-    $query = "DELETE FROM user WHERE id = :id";
-    $stmt = $this->conn->prepare($query);
-    $stmt->bindParam(':id', $userId);
-    
-    // Thực thi truy vấn
-    if($stmt->execute()) {
-        // Nếu xóa thành công, chuyển hướng hoặc hiển thị thông báo thành công
-        echo "Thành công";
-        // header("Location: success.php"); // Chuyển hướng đến trang thông báo thành công
-        exit();
-    } else {
-        // Nếu xóa không thành công, hiển thị thông báo lỗi
-        echo "Xóa dữ liệu không thành công.";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ct275_project";
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    try {
+        // Chuẩn bị câu truy vấn DELETE
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      
+        $stmt = $conn->prepare("DELETE FROM user WHERE id = :id");
+        // Gán giá trị cho tham số :id
+        $stmt->bindParam(':id', $id);
+        // Thực thi câu truy vấn
+        $stmt->execute();
+        // Chuyển hướng người dùng đến trang khác sau khi xóa thành công (nếu cần)
+        header("Location: users_view.php");
+        exit(); // Dừng việc thực thi mã PHP tiếp theo sau khi chuyển hướng
+    } catch(PDOException $e) {
+        echo "Lỗi khi xóa dữ liệu: " . $e->getMessage();
     }
 }
- }
-}
+$conn = null;
 ?>
+
 

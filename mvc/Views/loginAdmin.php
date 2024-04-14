@@ -14,7 +14,7 @@ require_once "./mvc/core/checkAdmin.php";
       </nav>
 <div class="container" id="container">
         <div class="form-container sign-in" style="margin-left: 200px;">
-            <form action="AdminshowUser" method="post">
+            <form action="checkAdmin" method="post">
                 <h1>Đăng nhập</h1>
                 <input type="text" id="username" name="username" placeholder="Username" required >
                 <input type="password" id="password" name="password" placeholder="Mật khẩu" required> 

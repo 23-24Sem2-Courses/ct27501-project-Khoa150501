@@ -18,51 +18,7 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Modal dự tính phí -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Dự tính phí</h1>
-        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="color: white;"></i></button>
-      </div>
-      <div class="modal-body">
-      <div class="container">
-  <h1>Bảng tính tổng số tiền</h1>
-  <select id="carSelect">
-        <option value="">Chọn xe</option>
-       
-    </select>
-    <input type="text" id="carPrice" placeholder="Giá của xe">
-  <div class="form">
-    <div class="input-group">
-      <label for="price">Giá niêm yết:</label>
-      <input type="number" id="price" readonly>
-    </div>
-    <div class="input-group">
-      <label for="registrationFee">Phí đăng kiểm:</label>
-      <input type="number" id="registrationFee">
-    </div>
-    <div class="input-group">
-      <label for="licenseFee">Phí biển số:</label>
-      <input type="number" id="licenseFee">
-    </div>
-    <div class="input-group">
-      <label for="insuranceFee">Phí Bảo hiểm:</label>
-      <input type="number" id="insuranceFee">
-    </div>
-    <button id="calculateBtn">Tính</button>
-    <div id="total"></div>
-  </div>
-</div>
-      </div> -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
-    </div>
-  </div>
-</div>
+  
   <script src="/public/js/javascrip.js"></script>
 </div>
     <div class="content mt-4">
@@ -85,7 +41,7 @@
           <div class="bordet-test mb-2" id="link-tinhphi" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <img src="../public/img/7992-converted-02.png" alt="" style="max-width: 70px;">
          
-          <p>Dự tính phí</p>
+          <p><a href="/Home/showTinh?acc=tinhgiaxe" style="text-decoration: none;color:black;">Dự tính phí</a></p>
 
           </div>
         </div>

@@ -27,5 +27,17 @@
                         <span>Người dùng</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a href="/admin/AdminShowFormDKTest" class="sidebar-link">
+                        <i class="lni lni-car-alt"></i>
+                        <span>Đăng ký lái thử</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/admin/AdminshowUser" class="sidebar-link">
+                        <i class="lni lni-car-alt"></i>
+                        <span>Quản lý lịch tư vấn</span>
+                    </a>
+                </li>
             </ul>
         </aside>

@@ -17,41 +17,32 @@ require_once "./public/partials/header.php"
       </nav>
 </header>
 <body>
+    <!-- Hiển thị thông báo đăng ký thành công nếu có -->
+<?php if (isset($_SESSION['success_message'])): ?>
+    <div><?php echo $_SESSION['success_message']; ?></div>
+    <?php unset($_SESSION['success_message']); // Xóa thông báo sau khi hiển thị ?>
+<?php endif; ?>
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="#">
+            <form action="resgister" method="post">
                 <h1>Đăng ký</h1>
-                <!--<div class="social-icons">
-                    <a href="#" class="icon"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" class="icon"><i class='bx bxl-google'></i></a>
-                    <a href="#" class="icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#" class="icon"><i class='bx bxl-github'></i></a>
-                </div>-->
-                <!-- <samp>or use your email for registration</samp> -->
                 <input type="text" name="fullname" placeholder="Họ tên">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password" >
                 <input type="tel" class="form-control" name="phone" required placeholder="Số điện thoại">
                 <input  type="text" class="form-control" name="address" required placeholder="Địa chỉ">
 
-                <button>Đăng ký</button>
+                <button type="submit" name="register">Đăng ký</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="#">
+            <form action="/homeviews" method="post">
                 <h1>Đăng nhập</h1>
-                <!--<div class="social-icons">
-                    <a href="#" class="icon"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" class="icon"><i class='bx bxl-google'></i></a>
-                    <a href="#" class="icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#" class="icon"><i class='bx bxl-github'></i></a>
-                </div>-->
-                <!-- <samp>or use your email Password</samp> -->
                 
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password"> 
+                <input type="text" placeholder="Fullname" name="fullname">
+                <input type="password" placeholder="Password" name="password"> 
                 <a href="#" class="fp">Quên mật khẩu?</a>
-                <button>Đăng nhập</button>
+                <button type="submit" name="login">Đăng nhập</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -71,7 +62,7 @@ require_once "./public/partials/header.php"
     </div>
 </body>
 
-
+<?php unset($_SESSION['success_message']); ?>
 <script>
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
