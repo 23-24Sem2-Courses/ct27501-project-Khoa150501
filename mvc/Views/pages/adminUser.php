@@ -1,76 +1,20 @@
-<?php
- require_once "./public/partials/header.php" ;
-
-?>
+<?php require_once "./public/partials/header.php" ?>
+<?php require_once "./public/partials/sidebar.php" ?>
 
 
-
-<script src="\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/public/css/admin.css">
 <body>
 
-    <?php include_once __DIR__ . './public/partials/sidebar.php'?>
-        
-        <div class="main p-4">
+    <!--adminUser-->
+    <div class="main p-4">
             <h1 class="pt-5">
                 Quản lý người dùng
             </h1>
             <br>
-            <div class="d-flex justify-content-between mb-3">
+            <div class=" justify-content-between mb-3">
                 <div class="">
-                    <!-- Button to Open the Modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Thêm mới
-                    </button>
+                <button class="btn btn-primary" ><a href="/admin/showAdduser" style="color: aliceblue; ">Thêm</a></button>
 
-                    <!-- The Modal -->
-                    <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Thêm người dùng</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="">
-                                                <strong>Họ và tên:</strong>
-                                            </label>
-                                            <input type="text" class="form-control border-success" placeholder="Nhập họ và tên"
-                                                id="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">
-                                                <strong>Email:</strong>
-                                            </label>
-                                            <input type="email" class="form-control border-success" placeholder="Nhập mật khẩu" id="passwordInput">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">
-                                                <strong>Số điện thoại:</strong>
-                                            </label>
-                                            <input type="number" class="form-control border-success" placeholder="Nhập mật khẩu" id="passwordInput">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">
-                                                <strong>Địa chỉ:</strong>
-                                            </label>
-                                            <input type="text" class="form-control border-success" placeholder="Nhập mật khẩu" id="passwordInput">
-                                        </div>
-                                        <button type="submit" class="btn btn-success btn-lock" style="width: 100%;">
-                                            Thêm
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="p-2">
                     <form class="d-flex" role="search">
                         <input class="border-info form-control me-2" type="search" placeholder="Tìm kiếm người dùng" aria-label="Search">
@@ -86,74 +30,44 @@
                     <th>Email</th>
                     <th>Số điện thoại</th>
                     <th>Địa chỉ</th>
+                    <th>Password</th>
                     <th>Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($user as $use): ?>
                     <tr> 
-                        <td class="text-center">1</td>
-                        <td class="text-center">Tài</td>
-                        <td class="text-center">tai@gmail.com</td>
-                        <td class="text-center">0123456789</td>
-                        <td class="text-center">20 Hai Bà Trưng</td>
+                        <td  ><?= $use['id'] ?></td>
+                        <td  ><?= $use['fullname'] ?></td>
+                        <td  ><?= $use['email'] ?> </td> 
+                        <td  ><?= $use['phone_number'] ?></td>
+                        <td  ><?= $use['address'] ?></td>
+                        <td  ><?= $use['password'] ?></td>
                         <td>
                             <!-- The Modal -->
-                            <div class="modal" id="myModalEdit">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Chỉnh sửa người dùng</h4>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                        </div>
-
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="">
-                                                        <strong>Họ và tên:</strong>
-                                                    </label>
-                                                    <input type="text" class="form-control border-success" placeholder="Nhập họ và tên"
-                                                        id="">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="">
-                                                        <strong>Email:</strong>
-                                                    </label>
-                                                    <input type="email" class="form-control border-success" placeholder="Nhập mật khẩu" id="passwordInput">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="">
-                                                        <strong>Số điện thoại:</strong>
-                                                    </label>
-                                                    <input type="number" class="form-control border-success" placeholder="Nhập mật khẩu" id="passwordInput">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="">
-                                                        <strong>Địa chỉ:</strong>
-                                                    </label>
-                                                    <input type="text" class="form-control border-success" placeholder="Nhập mật khẩu" id="passwordInput">
-                                                </div>
-                                                <button type="submit" class="btn btn-success btn-lock" style="width: 100%;">
-                                                    Lưu
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-center"><button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#myModalEdit">
-                                <i class="fa-solid fa-pen-to-square"></i></button>            
-                            <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+                            <div class="d-flex">
+                           <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#myModalEdit">
+                                <a href="/admin/editUserForm?action=update"> <i class="fa-solid fa-pen-to-square"></i></a></button>   
+                             
+                                <a href="deleteData?action=delete&id=2" ><i class="fa-solid fa-trash" ></i></a>
+                                
+                                <!-- <form method="post" action="deleteData">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="3">
+                                <button type="submit" class="btn btn-danger btn-sm ml-1" ><i class="fa-solid fa-trash" ></i></button>
+                                </form> -->
+                         
+                        </div>
                         </td>
+                        <?php endforeach; ?>
                     </tr>
+                   
+                    
                 </tbody>
             </table>
+         
         </div>
     </div>
-      
     <script src="/public/js/sidebar.js"></script>
     
 </body>

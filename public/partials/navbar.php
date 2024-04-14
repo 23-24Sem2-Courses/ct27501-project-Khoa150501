@@ -47,7 +47,7 @@
           <a class="nav-link" href="/gioiThieu/gioithieu">Giới Thiệu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Contact/contact" >Liên Hệ</a>
+          <a class="nav-link" href="/Contact/LienHe" >Liên Hệ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/DichVu/dichvu">Dịch vụ</a>

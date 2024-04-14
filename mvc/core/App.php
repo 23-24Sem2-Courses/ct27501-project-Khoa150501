@@ -2,8 +2,8 @@
 
 class App{
 
-    protected $controllers;
-    protected $action;
+    protected $controllers="Home";
+    protected $action = "homepage";
     protected $params=[];
     protected $router;
     function __construct(){

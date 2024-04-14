@@ -16,24 +16,24 @@
   }
 </style>
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Modal dự tính phí -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Dự tính phí</h1>
         <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="color: white;"></i></button>
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
       <div class="modal-body">
       <div class="container">
   <h1>Bảng tính tổng số tiền</h1>
-  <select id="dropdown">
-    <?php foreach ($options as $option): ?>
-        <option value="<?= $option['car_id'] ?>"><?= $option['vf-7'] ?></option>
-    <?php endforeach; ?>
-</select>
+  <select id="carSelect">
+        <option value="">Chọn xe</option>
+       
+    </select>
+    <input type="text" id="carPrice" placeholder="Giá của xe">
   <div class="form">
     <div class="input-group">
       <label for="price">Giá niêm yết:</label>
@@ -55,7 +55,7 @@
     <div id="total"></div>
   </div>
 </div>
-      </div>
+      </div> -->
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
@@ -884,12 +884,10 @@
             </div>
 </div> 
 <?php 
-  while($row = mysqli_fetch_array($data["Tong"])){
-    echo $row["name"];
-}
+// var_dump($kq);
 ?>
 </body>
-<script src="/public//js/jscrip.js"></script>
+<script src="/public/js/jscrip.js"></script>
 
 <!-- <script>
 document.getElementById("dangky_Test").addEventListener("click", function() {
@@ -897,6 +895,21 @@ document.getElementById("dangky_Test").addEventListener("click", function() {
 });
 </script> -->
 
-
+<script>
+        $(document).ready(function(){
+            $('#carSelect').change(function(){
+                var carName = $(this).val();
+                $.ajax({
+                    url: 'CarController.php?action=getCarPrice',
+                    type: 'POST',
+                    data: {carName: carName},
+                    dataType: 'json',
+                    success:function(response){
+                        $('#carPrice').val(response.price);
+                    }
+                });
+            });
+        });
+    </script>
 
 <?php require_once "./public/partials/footer.php" ?>

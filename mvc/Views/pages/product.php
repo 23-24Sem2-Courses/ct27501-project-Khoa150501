@@ -826,6 +826,27 @@
         <img src="/public/img/VinFast - Future of mobility - Vf8&9 (1) (1)_1666170465.jpg" alt="" style="width:145px;">
     </div>
 </div>
+<!-- <div>
+<h1>Car List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($cars as $car): ?>
+            <tr>
+                <td><?= $car['car_id'] ?></td>
+                <td><?= $car['name'] ?></td>
+                <td><?= $car['price'] ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div> -->
 </body>
 <script>
 document.addEventListener("DOMContentLoaded", function() {

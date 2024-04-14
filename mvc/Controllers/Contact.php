@@ -1,7 +1,7 @@
 <?php 
 
 class contact extends Controllers{
-    function contact(){
+    function LienHe(){
         
         $this->Views("contact");
     }
